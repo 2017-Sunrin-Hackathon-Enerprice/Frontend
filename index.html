@@ -7,10 +7,6 @@
     #logo{
       width: 220px;
     }
-    .navdiv{
-      text-align: center;
-      align-content: center;
-    }
     .toplogo{
       margin-top: 20px;
       margin-bottom: 20px;
@@ -20,7 +16,7 @@
       text-align: center;
     }
     #topMenu {
-      height: 35px;
+      height: 40px;
       width: 100%;
       background: -webkit-gradient(linear, 0% 0%, 88% 100%, from(#56ccf2), to(#2f80ed));
     }
@@ -29,7 +25,7 @@
       color: white;
       background-color: transparent;
       float: left;
-      line-height: 35px;
+      line-height: 40px;
       vertical-align: middle;
       text-align: center;
     }
@@ -45,9 +41,16 @@
     #topMenu .menuLink:hover {
       background-color: #5a8289;
     }
-    #search{
-      margin-left: 20px;
-      width: 600px;
+    #ser1{
+      width: 100%;
+      height: 35px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      border-color: #5bc0de;
+    }
+    #ser2{
+      width: 100%;
       height: 35px;
       -webkit-border-radius: 50px;
       -moz-border-radius: 50px;
@@ -59,37 +62,21 @@
       margin-right: 5px;
       margin-left: 20px;
     }
-    #mid{
-      float: left;
-      margin-right: 300px;
-    }
-    #select{
-      margin-left: 50px;
-      float: left;
-    }
-    .sort{
-      margin-top: 33px;
-      margin-right: 40px;
-    }
-    #cards{
-      float: left;
-      width: 500px;
-    }
-    #comparison{
-      width: 35%;
-    }
+
     #toright{
       margin-right: 10px;
     }
     .card{
       border-radius: 10px;
-      width: 100%;
+      margin-left: 6px;
+      width: 95%;
+      margin-right: 10px;
       height: 100px;
     }
     .cardimg{
       width: 100px;
-      margin-top: 8px;
-      margin-left: 30px;
+      margin-top: 5px;
+      margin-left: 3px;
     }
     .inside{
       margin-top: 20px;
@@ -112,16 +99,32 @@
       height: 335px;
       border-radius: 10px;
     }
+    .background{
+      overflow:auto;
+      height: 335px;
+      background-color: #e8eeee;
+      border-radius: 5px;
+    }
+    #comback{
+      height: 80px;
+      background-color: #e8eeee;
+      border-radius: 5px;
+    }
+    #comparbtn{
+      color: white;
+      width: 22%;
+      height: 30px;
+      text-align: center;
+      border-radius: 15px;
+      background-color: #5bc0de;
+    }
   </style>
-
 </head>
 <body>
 <div>
 <div class="toplogo">
   <img id="logo" src="imgs/logo_main_logo.png">
-  <input type="text" id="search">
 </div>
-<div class="navdiv">
   <div>
 
   </div>
@@ -132,42 +135,34 @@
         카테고리
       </li>
       <li>
-        <a class="menulink" href="#">TV</a>
+        <a class="menulink" href="#" onclick="clickTV()">TV</a>
       </li>
       <li>
-        <a class="menulink" href="#">냉장고</a>
+        <a class="menulink" href="#" onclick="clickAir()">에어컨</a>
       </li>
       <li>
-        <a class="menulink" href="#">세탁기</a>
+        <a class="menulink" href="#" onclick="clickRe()">냉장고</a>
       </li>
       <li>
-        <a class="menulink" href="#">전기요금 계산</a>
+        <a class="menulink" href="#" onclick="clickCal()">전기요금 계산</a>
       </li>
     </ul>
   </nav>
-</div>
-<div class="row">
-  <div class="col s1"></div>
-  <div class="col s4">
-  <h4>제품 선택하기</h4>
-  </div>
-  <div class="col s2 sort" align="center">
-    인기도순 | 최저가순 | 최고가순
-  </div>
-  <div class="col s3">
-    <h4>비교하기</h4>
-  </div>
-</div>
+  <div class="container">
   <div class="row">
-    <div class="col s1"></div>
-    <div class="col s6">
-      <div>
-        <p class="z-depth-4 card">
+    <div class="col s6" >
+      <h3>A 모델</h3>
+      <input type="text" class="search" id="ser1" onclick="find1(this.value)">
+      <div class="background" id="find1">
+        <div class="canberemoved" id="inner1">
+          <div>
+            <p class="z-depth-4 card">
           <span class="row">
             <span class="col s2">
               <img src="imgs/dumm.png" class="cardimg">
             </span>
-            <span class="col s6 inside">
+            <span class="col s1"></span>
+            <span class="col s9 inside">
               <span class="title">
                 LG전자의 휘센 어쩌고저쩌고
               </span>
@@ -175,23 +170,22 @@
               <span class="detail">
                 상세스펙들 어쩌고저쩌고 이렇다저렇다하는
               </span>
-            </span>
-            <span class="col s4 insider">
+              <br />
               <span class="lv">
-                1등급 | 699,000
-                <input type="radio" name="things" value="tv">
+                1등금 | 699,000
               </span>
             </span>
           </span>
-        </p>
-      </div>
-      <div>
-        <p class="z-depth-4 card">
+            </p>
+          </div>
+          <div>
+            <p class="z-depth-4 card">
           <span class="row">
             <span class="col s2">
               <img src="imgs/dumm.png" class="cardimg">
             </span>
-            <span class="col s6 inside">
+            <span class="col s1"></span>
+            <span class="col s9 inside">
               <span class="title">
                 LG전자의 휘센 어쩌고저쩌고
               </span>
@@ -199,23 +193,22 @@
               <span class="detail">
                 상세스펙들 어쩌고저쩌고 이렇다저렇다하는
               </span>
-            </span>
-            <span class="col s4 insider">
+              <br />
               <span class="lv">
-                1등급 | 699,000
-                <input type="radio" name="things" value="tv">
+                1등금 | 699,000
               </span>
             </span>
           </span>
-        </p>
-      </div>
-      <div>
-        <p class="z-depth-4 card">
+            </p>
+          </div>
+          <div>
+            <p class="z-depth-4 card">
           <span class="row">
             <span class="col s2">
               <img src="imgs/dumm.png" class="cardimg">
             </span>
-            <span class="col s6 inside">
+            <span class="col s1"></span>
+            <span class="col s9 inside">
               <span class="title">
                 LG전자의 휘센 어쩌고저쩌고
               </span>
@@ -223,25 +216,147 @@
               <span class="detail">
                 상세스펙들 어쩌고저쩌고 이렇다저렇다하는
               </span>
-            </span>
-            <span class="col s4 insider">
+              <br />
               <span class="lv">
-                1등급 | 699,000
-                <input type="radio" name="things" value="tv">
+                1등금 | 699,000
               </span>
             </span>
           </span>
-        </p>
+            </p>
+          </div>
+          <div>
+            <p class="z-depth-4 card">
+          <span class="row">
+            <span class="col s2">
+              <img src="imgs/dumm.png" class="cardimg">
+            </span>
+            <span class="col s1"></span>
+            <span class="col s9 inside">
+              <span class="title">
+                LG전자의 휘센 어쩌고저쩌고
+              </span>
+            <br />
+              <span class="detail">
+                상세스펙들 어쩌고저쩌고 이렇다저렇다하는
+              </span>
+              <br />
+              <span class="lv">
+                1등금 | 699,000
+              </span>
+            </span>
+          </span>
+            </p>
+          </div>
       </div>
     </div>
-    <div class="col s4">
-      <div>
-        <p class="z-depth-4 com">
-        </p>
+    </div>
+    <div class="col s6" >
+      <h3>B 모델</h3>
+      <input type="text" class="search" id="ser2" onclick="find2()">
+      <div class="background">
+        <div>
+          <p class="z-depth-4 card">
+          <span class="row">
+            <span class="col s2">
+              <img src="imgs/dumm.png" class="cardimg">
+            </span>
+            <span class="col s1"></span>
+            <span class="col s9 inside">
+              <span class="title">
+                LG전자의 휘센 어쩌고저쩌고
+              </span>
+            <br />
+              <span class="detail">
+                상세스펙들 어쩌고저쩌고 이렇다저렇다하는
+              </span>
+              <br />
+              <span class="lv">
+                1등금 | 699,000
+              </span>
+            </span>
+          </span>
+          </p>
+        </div>
+        <div>
+          <p class="z-depth-4 card">
+          <span class="row">
+            <span class="col s2">
+              <img src="imgs/dumm.png" class="cardimg">
+            </span>
+            <span class="col s1"></span>
+            <span class="col s9 inside">
+              <span class="title">
+                LG전자의 휘센 어쩌고저쩌고
+              </span>
+            <br />
+              <span class="detail">
+                상세스펙들 어쩌고저쩌고 이렇다저렇다하는
+              </span>
+              <br />
+              <span class="lv">
+                1등금 | 699,000
+              </span>
+            </span>
+          </span>
+          </p>
+        </div>
+        <div>
+          <p class="z-depth-4 card">
+          <span class="row">
+            <span class="col s2">
+              <img src="imgs/dumm.png" class="cardimg">
+            </span>
+            <span class="col s1"></span>
+            <span class="col s9 inside">
+              <span class="title">
+                LG전자의 휘센 어쩌고저쩌고
+              </span>
+            <br />
+              <span class="detail">
+                상세스펙들 어쩌고저쩌고 이렇다저렇다하는
+              </span>
+              <br />
+              <span class="lv">
+                1등금 | 699,000
+              </span>
+            </span>
+          </span>
+          </p>
+        </div>
+        <div>
+          <p class="z-depth-4 card">
+          <span class="row">
+            <span class="col s2">
+              <img src="imgs/dumm.png" class="cardimg">
+            </span>
+            <span class="col s1"></span>
+            <span class="col s9 inside">
+              <span class="title">
+                LG전자의 휘센 어쩌고저쩌고
+              </span>
+            <br />
+              <span class="detail">
+                상세스펙들 어쩌고저쩌고 이렇다저렇다하는
+              </span>
+              <br />
+              <span class="lv">
+                1등금 | 699,000
+              </span>
+            </span>
+          </span>
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id="comback">
+      <div id="comparbtn">비교하기
       </div>
     </div>
   </div>
+</div>
 </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/index.js"></script>
 </html>
