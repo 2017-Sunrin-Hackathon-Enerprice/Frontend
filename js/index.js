@@ -7,11 +7,9 @@ var temparr2;
 var currentfirindex;
 var currentsecindex;
 function clickTV(){
-    alert("state는 3입니다.");
     state = 3;
 }
 function clickRe(){
-    alert("state는 2입니다.");
     state = 2;
 }
 function clickAir(){
