@@ -94,7 +94,7 @@
     }
     .background{
       overflow:auto;
-      height: 335px;
+      height: 415px;
       background-color: #e8eeee;
       border-radius: 5px;
     }
@@ -102,14 +102,23 @@
       height: 80px;
       background-color: #e8eeee;
       border-radius: 5px;
-    }
-    #comparbtn{
-      color: white;
-      width: 22%;
-      height: 30px;
       text-align: center;
-      border-radius: 15px;
-      background-color: #5bc0de;
+    }
+    .fr{
+      background-color: #c0c0c0;
+      height: 190px;
+    }
+    #fimg{
+      margin-left: 40px;
+      margin-top: 55px;
+    }
+    #ps{
+      margin-top: 45px;
+      font-size: 19px;
+      color: #101010;
+    }
+    #tt{
+      color: #101010;
     }
   </style>
 </head>
@@ -145,7 +154,7 @@
   <div class="row">
     <div class="col s6" >
       <h3>A 모델</h3>
-      <input type="text" placeholder="상호명을 입력해주세요" class="search" id="ser1" onclick="find1(this.value)">
+      <input type="text" placeholder="상호명을 입력해주세요" class="search" id="ser1" onfocusout="find1(this.value)">
       <div class="background" id="find1">
         <div class="canberemoved" id="inner1">
           <div>
@@ -167,6 +176,9 @@
               <span class="lv">
                 1등금 | 699,000
               </span>
+
+              <input name="group1" type="radio" id="test1" />
+              <label for="test1">선택</label>
             </span>
           </span>
             </p>
@@ -190,6 +202,8 @@
               <span class="lv">
                 1등금 | 699,000
               </span>
+              <input name="group1" type="radio" id="test2" />
+              <label for="test2">선택</label>
             </span>
           </span>
             </p>
@@ -213,6 +227,8 @@
               <span class="lv">
                 1등금 | 699,000
               </span>
+              <input name="group1" type="radio" id="test3" />
+              <label for="test3">선택</label>
             </span>
           </span>
             </p>
@@ -236,6 +252,8 @@
               <span class="lv">
                 1등금 | 699,000
               </span>
+              <input name="group1" type="radio" id="test4" />
+              <label for="test4">선택</label>
             </span>
           </span>
             </p>
@@ -245,10 +263,11 @@
     </div>
     <div class="col s6" >
       <h3>B 모델</h3>
-      <input type="text" class="search" placeholder="상호명을 입력해주세요" id="ser2" onclick="find2()">
-      <div class="background">
-        <div>
-          <p class="z-depth-3 card">
+      <input type="text" placeholder="상호명을 입력해주세요" class="search" id="ser2" onfocusout="find2(this.value)">
+      <div class="background" id="find2">
+        <div class="canberemoved2" id="inner2">
+          <div>
+            <p class="z-depth-3 card">
           <span class="row">
             <span class="col s2">
               <img src="imgs/dumm.png" class="cardimg">
@@ -266,12 +285,15 @@
               <span class="lv">
                 1등금 | 699,000
               </span>
+
+              <input name="group2" type="radio" id="test11" />
+              <label for="test1">선택</label>
             </span>
           </span>
-          </p>
-        </div>
-        <div>
-          <p class="z-depth-3 card">
+            </p>
+          </div>
+          <div>
+            <p class="z-depth-4 card">
           <span class="row">
             <span class="col s2">
               <img src="imgs/dumm.png" class="cardimg">
@@ -289,12 +311,14 @@
               <span class="lv">
                 1등금 | 699,000
               </span>
+              <input name="group2" type="radio" id="test12" />
+              <label for="test2">선택</label>
             </span>
           </span>
-          </p>
-        </div>
-        <div>
-          <p class="z-depth-3 card">
+            </p>
+          </div>
+          <div>
+            <p class="z-depth-3 card">
           <span class="row">
             <span class="col s2">
               <img src="imgs/dumm.png" class="cardimg">
@@ -312,12 +336,14 @@
               <span class="lv">
                 1등금 | 699,000
               </span>
+              <input name="group2" type="radio" id="test13" />
+              <label for="test3">선택</label>
             </span>
           </span>
-          </p>
-        </div>
-        <div>
-          <p class="z-depth-3 card">
+            </p>
+          </div>
+          <div>
+            <p class="z-depth-3 card">
           <span class="row">
             <span class="col s2">
               <img src="imgs/dumm.png" class="cardimg">
@@ -335,20 +361,35 @@
               <span class="lv">
                 1등금 | 699,000
               </span>
+              <input name="group2" type="radio" id="test14" />
+              <label for="test4">선택</label>
             </span>
           </span>
-          </p>
+            </p>
+          </div>
         </div>
-      </div>
-      </div>
-    </div>
-    <div id="comback">
-      <div id="comparbtn">비교하기
       </div>
     </div>
   </div>
-</div>
-</div>
+  </div>
+    <div id="comback">
+      <a class="waves-effect waves-light btn-large" id="compare" onclick="checkradio()">비교하기</a>
+    </div>
+  </div>
+<footer class="fr">
+    <div class="row">
+      <div class="col s4">
+        <img src="imgs/main_fotter_logo.png" id="fimg">
+      </div>
+      <div class="col s2"></div>
+      <div class="col s6" id="tt">
+        <p class="grey-text text-lighten-4" id="ps">[04314]서울 용산구 원효로97길 33-4 (청파동3가, 선린인터넷고등학교)
+          Enerprice는 결제정보의 중개서비스 또는 통신판매중개시스템의 제공자로서, 통신판매의 당사자가 아니며
+          상품의 주문, 배송 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.</p>
+      </div>
+    </div>
+</footer>
+
 </body>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/index.js"></script>

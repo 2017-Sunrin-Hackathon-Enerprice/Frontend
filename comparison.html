@@ -1,0 +1,210 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <style>
+        #logo{
+            width: 220px;
+        }
+        .toplogo{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-decoration: none;
+            display: block;
+            list-style: none;
+            text-align: center;
+        }
+        #topMenu {
+            height: 40px;
+            width: 100%;
+            background: -webkit-gradient(linear, 0% 0%, 88% 100%, from(#56ccf2), to(#2f80ed));
+        }
+        #topMenu ul li{
+            list-style: none;
+            color: white;
+            background-color: transparent;
+            float: left;
+            line-height: 40px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        #topMenu .menulink{
+            text-decoration: none;
+            color: white;
+            display: block;
+            width: 110px;
+            font-size:12px;
+            font-weight: bold;
+            font-family: "Trebuchet MS", Dotum, Arial;
+        }
+        #topMenu .menuLink:hover {
+            background-color: #5a8289;
+        }
+        #cateimg{
+            width: 20px;
+            margin-right: 5px;
+            margin-left: 20px;
+        }
+
+        #toright{
+            margin-right: 10px;
+        }
+        .bigcard{
+            height: 800px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        #ss{
+            margin-top: 30px;
+            width: 100%;
+            margin-bottom: 20px;
+
+        }
+        #lg{
+            width: 100%;
+        }
+        #title{
+            text-align: center;
+        }
+        #sub{
+            text-align: center;
+        }
+        #price{
+            text-align: center;
+        }
+        #watt{
+            text-align: center;
+        }
+        #title1{
+            text-align: center;
+        }
+        #sub1{
+            text-align: center;
+        }
+        #price1{
+            text-align: center;
+        }
+        #watt1{
+            text-align: center;
+        }
+        .test{
+            font-size: 18px;
+           text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="toplogo">
+        <img id="logo" src="imgs/logo_main_logo.png">
+    </div>
+    <div>
+
+    </div>
+    <nav id="topMenu">
+        <ul>
+            <li id="toright">
+                <img src="imgs/ic_main_category.png" id="cateimg">
+                카테고리
+            </li>
+            <li>
+                <a class="menulink" href="#" onclick="clickTV()">TV</a>
+            </li>
+            <li>
+                <a class="menulink" href="#" onclick="clickAir()">에어컨</a>
+            </li>
+            <li>
+                <a class="menulink" href="#" onclick="clickRe()">냉장고</a>
+            </li>
+            <li>
+                <a class="menulink" href="#" onclick="clickCal()">전기요금 계산</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col s6">
+            <div class="z-depth-3 bigcard" id="fircard">
+                <div class="row">
+                    <div class="col s4"></div>
+                    <div class="col s4">
+                        <img src="js/img/ss.png" id="ss" >
+                    </div>
+                    <div class="col s4"></div>
+                </div>
+                <div id="title">
+                </div>
+                <br />
+                <div id="sub">
+                </div>
+                <br />
+                <div id="price">
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <div id="watt">
+                    소비 전력 :
+                </div>
+                <div class="row">
+                    <div class="col s4 test">하루 사용량</div>
+                    <input type="text" class="col s7" id="day1">
+                </div>
+                <div class="row">
+                    <div class="col s4 test">사용 일수</div>
+                    <input type="text" class="col s7" id="time1" onfocusout="first()">
+                </div>
+                <div class="row">
+                    <div class="col s4 test">비용</div>
+                    <input disabled type="text" class="col s7" id="cost1">
+                </div>
+            </div>
+        </div>
+        <div class="col s6">
+            <div class="z-depth-3 bigcard" id="seccard">
+                <div class="row">
+                    <div class="col s4"></div>
+                    <div class="col s4">
+                        <img src="js/img/lg.jpg" id="lg" >
+                    </div>
+                    <div class="col s4"></div>
+                </div>
+                <div id="title1">
+                </div>
+                <br />
+                <div id="sub1">
+                </div>
+                <br />
+                <div id="price1">
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <div id="watt1">
+                    소비 전력 :
+                </div>
+                <div class="row">
+                    <div class="col s4 test">하루 사용량</div>
+                    <input type="text" class="col s7" id="day2">
+                </div>
+                <div class="row">
+                    <div class="col s4 test">사용 일수</div>
+                    <input type="text" class="col s7" id="time2" onfocusout="sec()">
+                </div>
+                <div class="row">
+                    <div class="col s4 test">비용</div>
+                    <input disabled type="text" class="col s7" id="cost2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/comparison.js"></script>
+</html>
