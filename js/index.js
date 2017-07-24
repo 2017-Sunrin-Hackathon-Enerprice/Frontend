@@ -239,12 +239,7 @@ function checkradio(){
             radiochecked2(i);
         }
     }
-    alert(fir_on);
-    alert(sec_on);
     if(fir_on==1&&sec_on==1){
-        alert("fircur = "+currentfirindex);
-        alert("seccur = "+currentsecindex);
-        alert("따라서, 선택한 항목의 모델명 : " +temparr1[currentfirindex].모델명)
         var compare = window.open("comparison.html","Comparison");
         commpare.focus();
         compare.callFromParent(temparr1);
