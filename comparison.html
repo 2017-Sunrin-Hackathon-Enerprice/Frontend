@@ -3,6 +3,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <link href="css/jquery.jqplot.min.css">
     <style>
         #logo{
             width: 220px;
@@ -93,6 +94,9 @@
            text-align: center;
             margin-top: 20px;
         }
+        #chart{
+            height: 150px;
+        }
     </style>
 </head>
 <body>
@@ -144,9 +148,6 @@
                 <div id="price">
                 </div>
                 <br />
-                <br />
-                <br />
-                <br />
                 <div id="watt">
                     소비 전력 :
                 </div>
@@ -161,6 +162,10 @@
                 <div class="row">
                     <div class="col s4 test">비용</div>
                     <input disabled type="text" class="col s7" id="cost1">
+                </div>
+                <div class="row">
+                    <div class="col s4 test">비용 (가격포함)</div>
+                    <input disabled type="text" class="col s7" id="costs1">
                 </div>
             </div>
         </div>
@@ -182,9 +187,7 @@
                 <div id="price1">
                 </div>
                 <br />
-                <br />
-                <br />
-                <br />
+
                 <div id="watt1">
                     소비 전력 :
                 </div>
@@ -200,11 +203,22 @@
                     <div class="col s4 test">비용</div>
                     <input disabled type="text" class="col s7" id="cost2">
                 </div>
+                <div class="row">
+                    <div class="col s4 test">비용 (가격포함)</div>
+                    <input disabled type="text" class="col s7" id="costs2">
+                </div>
+                <div id="chart">
+
+                </div>
             </div>
         </div>
     </div>
 </div>
 </body>
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.jqplot.js"></script>
+<script src="js/jqplot.categoryAxisRenderer.js"></script>
+<script src="js/jqplot.barRenderer.js"></script>
+<script src="js/jqplot.pointLabels.js"></script>
 <script src="js/comparison.js"></script>
 </html>
