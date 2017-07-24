@@ -20,44 +20,89 @@ function find1(val){
         type: "POST",
         url: "http://soylatte.kr:3000/db/find",
         data: "model="+val+"&kind="+state,
-        success: function(data){
-        if(state==3){
-            alert(JSON.stringify(data));
-            var realdata = JSON.parse(JSON.stringify(data));
-            $(".canberemoved").remove();
-            $("#find1").html("<div"+" class=\""+"canberemoved\""+" id="+"\"inner1\" "+">"+"</div>");
-            for(var i = 0; i<realdata.length;i++)
-            {
-                $("#inner1").append("<div>" + "<p class=\"z-depth-4 card\">" + "<span class=\"row\">" + "<span class=\"col s2\">" + "<img src=\"imgs/dumm.png\"" + "class=\"cardimg\">" + "</span>" +
-                    "<span class=\"col s1\"></span>" +
-                    "<span class=\"col s9 inside\">" +
-                    "<span class=\"title\">" +
-                    realdata[i].업체명+" 제품" +
-                    "</span>" +
-                    "<br />" +
-                    "<span class=\"detail\">" +
-                    "화면대각선길이 : " + realdata[i].화면대각선길이 + " 디스플레이방식 : " + realdata[i].디스플레이방식+
-                    "</span>" +
-                    "<br />" +
-                    "<span class=\"lv\">" +
-                    "( "+realdata[i].효율등급+" 등급 )"+" 소비전력"+" | " +realdata[i].소비전력+
-                    "</span>" +
-                    "</span>" +
-                    "</span>" +
-                    "</p>" +
-                    "</div>");
-            }
-        }
-        if(state==2){
-                for(var i = 0; i<data.length;i++)
-                {
-                    alert("하나잡음");
+        success: function(data) {
+            if (state == 3) {
+                alert(JSON.stringify(data));
+                var realdata = JSON.parse(JSON.stringify(data));
+                $(".canberemoved").remove();
+                $("#find1").html("<div" + " class=\"" + "canberemoved\"" + " id=" + "\"inner1\" " + ">" + "</div>");
+                for (var i = 0; i < realdata.length; i++) {
+                    $("#inner1").append("<div>" + "<p class=\"z-depth-3 card\">" + "<span class=\"row\">" + "<span class=\"col s2\">" + "<img src=\"imgs/dumm.png\"" + "class=\"cardimg\">" + "</span>" +
+                        "<span class=\"col s1\"></span>" +
+                        "<span class=\"col s9 inside\">" +
+                        "<span class=\"title\">" +
+                        realdata[i].업체명 + " 제품" +
+                        "</span>" +
+                        "<br />" +
+                        "<span class=\"detail\">" +
+                        "화면대각선길이 : " + realdata[i].화면대각선길이 + " 디스플레이방식 : " + realdata[i].디스플레이방식 +
+                        "</span>" +
+                        "<br />" +
+                        "<span class=\"lv\">" +
+                        "( " + realdata[i].효율등급 + " 등급 )" + " 소비전력" + " | " + realdata[i].소비전력 +
+                        "</span>" +
+                        "</span>" +
+                        "</span>" +
+                        "</p>" +
+                        "</div>");
                 }
-        }
-            },
+            }
+            if (state == 2) {
+                alert(JSON.stringify(data));
+                var realdata = JSON.parse(JSON.stringify(data));
+                $(".canberemoved").remove();
+                $("#find1").html("<div" + " class=\"" + "canberemoved\"" + " id=" + "\"inner1\" " + ">" + "</div>");
+                for (var i = 0; i < realdata.length; i++) {
+                    $("#inner1").append("<div>" + "<p class=\"z-depth-3 card\">" + "<span class=\"row\">" + "<span class=\"col s2\">" + "<img src=\"imgs/dumm.png\"" + "class=\"cardimg\">" + "</span>" +
+                        "<span class=\"col s1\"></span>" +
+                        "<span class=\"col s9 inside\">" +
+                        "<span class=\"title\">" +
+                        realdata[i].업체명 + " 제품" +
+                        "</span>" +
+                        "<br />" +
+                        "<span class=\"detail\">" +
+                        "용량 : " + realdata[i].용량 + " 모델명 : " + realdata[i].모델명 +
+                        "</span>" +
+                        "<br />" +
+                        "<span class=\"lv\">" +
+                        "( " + realdata[i].효율등급 + " 등급 )" + " 소비전력" + " | " + realdata[i].월간소비전력량 +
+                        "</span>" +
+                        "</span>" +
+                        "</span>" +
+                        "</p>" +
+                        "</div>");
+                }
+            }
+            if (state == 1) {
+                alert(JSON.stringify(data));
+                var realdata = JSON.parse(JSON.stringify(data));
+                $(".canberemoved").remove();
+                $("#find1").html("<div" + " class=\"" + "canberemoved\"" + " id=" + "\"inner1\" " + ">" + "</div>");
+                for (var i = 0; i < realdata.length; i++) {
+                    $("#inner1").append("<div>" + "<p class=\"z-depth-3 card\">" + "<span class=\"row\">" + "<span class=\"col s2\">" + "<img src=\"imgs/dumm.png\"" + "class=\"cardimg\">" + "</span>" +
+                        "<span class=\"col s1\"></span>" +
+                        "<span class=\"col s9 inside\">" +
+                        "<span class=\"title\">" +
+                        realdata[i].업체명 + " 제품" +
+                        "</span>" +
+                        "<br />" +
+                        "<span class=\"detail\">" +
+                        "냉방능력 : " + realdata[i].정격냉방능력 + " 모델명 : " + realdata[i].모델명 +
+                        "</span>" +
+                        "<br />" +
+                        "<span class=\"lv\">" +
+                        "( " + realdata[i].효율등급 + " 등급 )" + " 소비전력" + " | " + realdata[i].냉방기간월간소비전력량 +
+                        "</span>" +
+                        "</span>" +
+                        "</span>" +
+                        "</p>" +
+                        "</div>");
+                }
+            }
+        },
         error: function(xhr, status, error)     {
             alert("서버에 문제가 있습니다. 관리자에게 문의하세요");
-        }
+        },
     });
 }
 function find2(){
