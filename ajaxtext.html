@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="something">
+
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            type: "POST",
+            url: "http://soylatte.kr:3000/api/find",
+            data: "find=삼성",
+            success: function (data) {
+                alert(data);
+                alert(JSON.stringify(data));
+            },
+            error: function (xhr, status, error) {
+                alert("서버에 오류생겼다 bro; jqXHR : " + xhr + " status : " + status + " error : " + error);
+            }
+        });
+    });
+</script>
+</html>

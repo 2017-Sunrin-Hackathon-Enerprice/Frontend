@@ -1,28 +1,35 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <link href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
   <style>
     #logo{
-      width: 300px;
+      width: 220px;
     }
     .navdiv{
       text-align: center;
       align-content: center;
     }
     .toplogo{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-decoration: none;
+      display: block;
+      list-style: none;
       text-align: center;
     }
     #topMenu {
-      height: 30px;
-      width: 850px;
+      height: 35px;
+      width: 100%;
+      background: -webkit-gradient(linear, 0% 0%, 88% 100%, from(#56ccf2), to(#2f80ed));
     }
     #topMenu ul li{
       list-style: none;
       color: white;
-      background-color: #2d2d2d;
+      background-color: transparent;
       float: left;
-      line-height: 30px;
+      line-height: 35px;
       vertical-align: middle;
       text-align: center;
     }
@@ -30,39 +37,94 @@
       text-decoration: none;
       color: white;
       display: block;
-      width: 150px;
+      width: 100px;
       font-size:12px;
       font-weight: bold;
       font-family: "Trebuchet MS", Dotum, Arial;
     }
     #topMenu .menuLink:hover {
-      color:red;
-      background-color: #4d4d4d;
+      background-color: #5a8289;
+    }
+    #search{
+      margin-left: 20px;
+      width: 600px;
+      height: 35px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+      border-color: #5bc0de;
+    }
+    #cateimg{
+      width: 20px;
+      margin-right: 10px;
+    }
+    #mid{
+      float: left;
+      margin-right: 300px;
+    }
+    #select{
+      margin-left: 50px;
+      float: left;
+    }
+    #sort{
+      margin-top: 33px;
+      margin-right: 40px;
+    }
+    #cards{
+      float: left;
+      width: 500px;
+    }
+    #comparison{
+      width: 35%;
     }
   </style>
+
 </head>
 <body>
-<div class="container">
 <div class="toplogo">
-  <img id="logo" src="imgs/logo.png">
+  <img id="logo" src="imgs/logo_main_logo.png">
+  <input type="text" id="search">
 </div>
+<div class="navdiv">
+  <div>
 
+  </div>
   <nav id="topMenu">
     <ul>
       <li>
-        <a class="menulink" href="#">category1</a>
+        <img src="imgs/ic_main_category.png" id="cateimg">
+        카테고리
       </li>
       <li>
-        <a class="menulink" href="#">category2</a>
+        <a class="menulink" href="#">TV</a>
       </li>
       <li>
-        <a class="menulink" href="#">category3</a>
+        <a class="menulink" href="#">냉장고</a>
+      </li>
+      <li>
+        <a class="menulink" href="#">세탁기</a>
+      </li>
+      <li>
+        <a class="menulink" href="#">전기요금 계산</a>
       </li>
     </ul>
   </nav>
 </div>
+<div id="mid">
+  <h2 id="select">제품 선택하기</h2>
+</div>
+<div id="sort" style="float: left">
+  인기도순 | 최저가순 | 최고가순
+</div>
+<div>
+  <h2>비교하기</h2>
+</div>
+<div id="cards">
+somewerwerewrwerewrewrewrewrewrewrwerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+</div>
+<div id="comparison">
+thingrrrwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwrwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/index.js"></script>
 </html>
